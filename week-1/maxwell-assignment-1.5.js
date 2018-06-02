@@ -44,7 +44,7 @@ lastName = "Doe";
 middleName = "No";
 address = "101 B Street Omaha, NE 68100";
 payRate = parseFloat(10.74);
-hireDate = new Date(2014, 2, 12);
+hireDate = new Date(2014, 2, 12).toLocaleString();
 
 console.log('First Name:' + ' ' + firstName);
 console.log('Last Name:' + ' ' + lastName);
