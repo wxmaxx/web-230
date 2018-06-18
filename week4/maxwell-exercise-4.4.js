@@ -60,7 +60,6 @@ console.log("");
 
 // // display the sorted array using the filter() method
 console.log("--DISPLAYING ORIGINAL SORTED ARRAY--");
-// for (var j = 0; j < states.length; j++)
 sorted = states.sort(getValue(states))
 console.log(sorted);
 
