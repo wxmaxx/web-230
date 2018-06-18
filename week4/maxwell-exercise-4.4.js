@@ -34,7 +34,7 @@
 
 var header = require('../header.js'); 
 // Adding header information
-console.log(header.display("Leon", "Maxwell", "Exercise 4.2")); 
+console.log(header.display("Leon", "Maxwell", "Exercise 4.4")); 
 console.log("\n");
 
 // create an array and assign it to the variable x
