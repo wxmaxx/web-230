@@ -30,5 +30,4 @@ function getFruit(arr) {
 getFruit(fruits);
 
 
->>>>>>> a2ba7a03b565460081282edce0d49cc6a2ef9938
 // end program
