@@ -99,13 +99,13 @@ console.log("\n");
 
 
 
-// var comnposersByRating = famousComposers.map(function(composer) {
-//     famousComposers.forEach(function(composer){
-//         console.log(
-//             "Last Name: " + composer.lastName + "\n" + ", Rating: " + composer.rating + "\n"
-//         );
-//     })
-//     });
+var comnposersByRating = famousComposers.map(function(composer) {
+    famousComposers.forEach(function(composer){
+        console.log(
+            "Last Name: " + composer.lastName + "\n" + ", Rating: " + composer.rating + "\n"
+        );
+    })
+    });
 
 // var composersByGenre = famousComposers.map(function(composer) {
 
