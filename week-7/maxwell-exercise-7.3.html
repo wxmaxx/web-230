@@ -1,0 +1,60 @@
+<!-- /*
+============================================
+; Title:  Program Header
+; Author: Professor Krasso 
+; Date:   25 June 2017
+; Modified By: <Leon Maxwell>
+; Modified date: 5 Jul 2018
+; Description: client-side javaScript
+;===========================================
+*/  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Client-Side JavaScript</title>
+    <link rel="stylesheet" href="../site.css">
+</head>
+
+<body>
+
+<div id="one">
+    <script>
+        // uses the document.write to add an orderd list (which is not the recommended method)
+        document.write("<h1>SHOPPING LIST v.1</h1>");
+        document.write("<ol>");
+        document.write("<li>Oranges</li><li>Apples</li><li>Pears</li><li>Limes</li><li>Lemons</li>");
+        document.write("<ol>");
+    </script>
+</div>
+
+ 
+<div id="shopV2">
+<h1 id="shopV2"></h1>     
+
+    <script>
+        // document.get puts SHOPPING LIST v.2 in the h1 tag with id of shopV2
+        document.getElementById('shopV2').innerHTML = "<h1>SHOPPING LIST v.2</h1>" +
+        // adds a table under the shopping list v.2 h1 tag
+        "<table>" +
+            "<thead>" +
+                "<tr>" +
+                    "<th>Id</th>" +
+                    "<th>Item</th>" +
+                "</tr>" +
+            "</thead>" +
+            "<tbody>" +
+                "<tr><td>1.</td><td>Oranges</td></tr>" +
+                "<tr><td>2.</td><td>Apples</td></tr>" +
+                "<tr><td>3.</td><td>Pears</td></tr>" +
+                "<tr><td>4.</td><td>Limes</td></tr>" +
+                "<tr><td>5.</td><td>Lemons</td></tr>" +
+            "</tbody>" +
+        "</table>"
+    </script>
+</div>
+
+
+</body>
+</html>
