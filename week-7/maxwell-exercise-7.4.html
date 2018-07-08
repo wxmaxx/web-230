@@ -4,7 +4,7 @@
 ; Author: Professor Krasso 
 ; Date:   25 June 2017
 ; Modified By: <Leon Maxwell>
-; Modified date: 5 Jul 2018
+; Modified date: 8 Jul 2018
 ; Description: inline javaScript functions
 ;===========================================
 */  -->
@@ -22,7 +22,7 @@
     <a href="javascript:alert(new Date().toLocaleTimeString());">
                 What time is it?
     </a>
-
+<!-- Created a table with  five computer components-->
     <h1>Computer Componenets</h1>
             
     <br/>
@@ -40,9 +40,11 @@
                 <td>1</td>
                 <td>Laptop</td>
                 <td>1500.99</td>
+                <!-- placed a table inside a table data to create the edit and delete under the Functions thead -->
                 <td><table>
-                        <tr id="ed1"><a href="#ed1">EDIT | </a></tr>
-                        <tr id="del1"><a href="#del1">DELETE</a></tr>
+                    <!-- The ed1 and del1 functions are called when clicking on the link -->
+                        <tr id="ed1"><a href="#ed1" onclick="ed1()">EDIT | </a></tr>
+                        <tr id="del1"><a href="#del1" onclick="del1()">DELETE</a></tr>
                     </table>
                 </td>
             </tr>
@@ -93,21 +95,26 @@
     
     <br/>
 
-    <p>Selecting the EDIT href fro item 1:</p>
+    <p>Selecting the EDIT href for item 1:</p>
+    <!-- Script sets the ed1 function to alert the number 1 when called by the onclick in the table -->
+    <script>
+    function ed1() {
+        var x = document.getElementById('ed1');
+        alert('1')
+    }
+    </script>
 
-
-    <a href="javascript:alert('bar');">
-            Click me!
-    </a>
 
     <p>Selecting the DELETE href for item 1:</p>
+    <!-- Script sets the del1 function to alert deletion confirmation when called by the onclick in the table -->
+    <script>
+        function del1() {
+            var x = document.getElementById('del1');
+            alert('Are you sure you want to delete this item?')
+        }
+    </script>
 
 
-
-<br/><br/>
-<button onclick="confirm('Are you sure?');">Submit</button>
-
-<a href="edit" 
 
 
 
