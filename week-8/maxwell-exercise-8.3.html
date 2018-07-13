@@ -4,7 +4,7 @@
 ; Author: Professor Krasso 
 ; Date:   27 November 2017
 ; Modified By: <Leon Maxwell>
-; Modified date: 11 Jul 2018
+; Modified date: 13 Jul 2018
 ; Description: jQuery-click HTML
 ;===========================================
 */  -->
@@ -84,24 +84,23 @@
 
 
 <script type="text/javascript">
-
-    // $(function() {
-
-    //     /*
-    //         JavaScript code goes here...
-
-    //     */
-    // });
-
+    
+    
+      // function creates a click event for the button with the id of toggle
      $(function () {
-        $("p").click(function () {
-            $(this).css("background-color", "red");
-            $(this).css("color", "white");
+        $("#toggle").click(function () {
+            // when the button is clicked, it applies the background color of red to the div id of toggled-content
+            $("#toggled-content").css("background-color", "red");
         });
+        // creates a click event for the fruit class
         $(".fruitId").click(function (event) {
+            // preventDefault prevents the browser from opening a new URL
             event.preventDefault();
+            // create variable that targets fruitId class
+            // second variable targets data in the closest table data cell first and then proceeds to next td cell
             var fruitId = $(this).text();
             var fruitType = $(this).closest("td").next().text();
+            // outputs both called variables to an alert window
             alert("{fruit_id: " + fruitId + ", fruit_type: " + fruitType + "}");
         });
     });
