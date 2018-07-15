@@ -1,0 +1,123 @@
+
+<!-- /*
+; Title:  Program Header
+; Author: Professor Krasso 
+; Date:   27 November 2017
+; Modified By: <Leon Maxwell>
+; Modified date: 13 Jul 2018
+; Description: Assignment 8.4, putting it all together
+*/  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment 8.4</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="../site.css">
+
+    <style type="text/css">
+        #employee tbody tr:hover {
+            cursor: pointer;
+            background-color: #ffff99;
+        }
+    </style>
+    
+</head>
+<body>
+
+<div id="emps"></div>
+
+
+<script type="text/javascript">
+
+
+
+   // declare global variable of employees and assign it to an empty array 
+    
+    var employees = [];
+
+    // employee constructor object
+    // create a Person constructor and assign the 4 arguments
+    function Person(id, first, last, title) {
+           // assign the arguments to the this keyword
+           this.id = id;
+           this.firstName = first;
+           this.lastName = last;
+           this.title = title;
+        }
+        
+    //  create a list of employees using the Person constructor
+        var emp1 = new Person("1", "John", "Doe", "Budget Analyst");
+        var emp2 = new Person("2", "Amy", "Voight", "Secretary");
+        var emp3 = new Person("3", "Fred", "Sctick", "Janitor");
+        var emp4 = new Person("4", "Bobby", "NotFlay", "Personal Chef");
+        var emp5 = new Person("5", "June", "Bug", "Chief Financial Officer");
+
+
+    // populate the employee array with emp1 through emp5
+    employees.push(emp1, emp2, emp3, emp4, emp5);
+      
+      
+    // log employees.length to show array is successful 
+    console.log("-- NUMBER OF EMPLOYEES IN ARRAY --");
+    console.log(employees.length);
+
+
+    // create a function that returns an id from the array
+    function getEmployee(id) {
+        employees.forEach(function(emp1) {
+            var id = employees.map(function(employee){
+                return emp1;
+            })
+            alert(emp1.id + " " + emp1.firstName + " " + emp1.lastName + " " + emp1.title);
+        });
+        
+    }
+
+    getEmployee();
+
+// output string variable
+        var output = "<h3>-- Original List --</h3><h1>Employee Listing</h1>";
+            output += "<table id='employee'>";
+            output += "<thead><tr><th>Id</th><th>First Name</th><th>Last Name</th><th>Title</th></tr></thead>";
+            output += "<tbody>";
+            output += "<tr>";
+    
+        // // for loop
+        // outer loop applies to each employee in the array
+        // for (var i = 0; i < employees.length; i++) {
+        //     // inner loop applies to specifics of each employee
+        //     for (var j = 0; j < employees[i].length; j++) {
+        //         output += "<td>" + employees[i][j] + "</td>";
+        //         }
+            
+        // }
+
+        for (var row = 0; row < table.length; row++) {
+            for (col = 0; col < tabel[row].length; col++) {
+                output += "<td>" + table[row][col] + "</td>";
+            }
+        }
+            output += "</tr>";
+            output += "</tbody>";
+            output += "</table>";
+            
+        
+        // innerHTML call
+
+        document.getElementById('emps').innerHTML = output;
+
+        // jQuery onClick event
+        console.log("-- Hovering over a record --");
+
+        // $(getEmployee (emp1) {
+        //     $("table tr").click(function () {
+    
+        //     })
+        // });
+    </script>
+</body>
+</html>
